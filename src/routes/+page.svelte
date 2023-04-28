@@ -123,10 +123,10 @@
 					{#if active} Deactivate {:else} Activate {/if}
 				</button>
 			</div>
-			<div class="flex justify-center rounded grow-0 p-4 gap-4">
+			<div class="flex flex-col md:flex-row justify-center rounded grow-0 p-4 gap-4">
 				<div class="flex flex-row shadow-md shadow-black">
 					<label for="_gain" class=" bg-slate-800 rounded-l p-4">Gain </label>
-					<div class="bg-slate-700 rounded-r self-center p-4">
+					<div class="bg-slate-700 rounded-r self-center p-4 w-full">
 						<input
 							name="_gain"
 							type="range"
@@ -134,7 +134,7 @@
 							max="1"
 							bind:value={gain}
 							step="any"
-							class="self-center"
+							class="self-center w-full"
 							on:dblclick={() => (gain = 0.25)}
 						/>
 					</div>
@@ -142,7 +142,7 @@
 
 				<div class="flex flex-row shadow-md shadow-black">
 					<label for="_pan" class=" bg-slate-800 rounded-l p-4">Pan</label>
-					<div class="bg-slate-700 rounded-r self-center p-4">
+					<div class="bg-slate-700 rounded-r self-center p-4 w-full">
 						<input
 							name="_pan"
 							type="range"
@@ -150,7 +150,7 @@
 							max="1"
 							bind:value={pan}
 							step="any"
-							class="self-center"
+							class="self-center w-full"
 							on:dblclick={() => (pan = 0)}
 						/>
 					</div>
@@ -158,10 +158,10 @@
 			</div>
 		</div>
 
-		<div class="flex flex-col mx-20">
+		<div class="flex flex-col md:mx-20">
 			<div class="flex flex-col shadow-md shadow-black bg-slate-800">
 				<span class="p-4 self-center rounded-t w-full"> Band pass </span>
-				<div class="grid grid-cols-[20%_1fr]">
+				<div class="grid grid-cols-[30%_1fr]">
 					<label for="_q" class="p-2 grow text-right">Q value</label>
 					<div class="flex bg-slate-700 w-full h-full">
 						<input
